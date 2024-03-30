@@ -2,7 +2,7 @@
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     if (isset($_GET['query'])) {
         $query = $_GET['query'];
-        $url = 'https://jsonplaceholder.typicode.com/comments';
+        $url = 'https://jsonplaceholder.typicode.com/comments?postId=3';
         $response = file_get_contents($url);
         $data = json_decode($response, true);
         echo json_encode($data);
