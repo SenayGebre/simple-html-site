@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         echo json_encode($data);
     } else {
         http_response_code(400);
-        echo json_encode(array("error" => "Query parameter missing"));
+        echo json_encode(array("error" => "Missing query parameter"));
     }
 } else {
     http_response_code(405);
